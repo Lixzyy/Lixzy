@@ -193,8 +193,8 @@
       const body = document.body;
 
       // ---- Config ----
-      const USER = "Larry Caillon"; // ← Personnalise ici ton nom
-      const PROMPT = 'larry@portfolio:~$';
+      const USER = "Lixzy"; // ← Personnalise ici ton nom
+      const PROMPT = 'Lixzy:~$';
       const TYPING_SPEED = 0; // ms par caractère (mets 0 pour instantané)
       const SAVE_THEME_KEY = 'terminal_theme';
 
@@ -202,31 +202,37 @@
       const projects = [
         {
           id: 1,
-          title: "Script Bûcheron — FiveM",
+          title: "Menu admin — FiveM",
           stack: ["Lua", "FiveM", "DB", "Webhooks"],
-          desc: "Job complet : PED, menu service, tenue modée, collecte troncs, camion, livraison, récompenses argent, logs webhook. Compatible toutes bases.",
+          desc: "Menu complet : RageUi, Ban, Jail, tenue modée, système de grade, report, Menu ped, logs webhook. Compatible toutes bases.",
           url: null
         },
         {
           id: 2,
-          title: "Interface UI Moderne",
-          stack: ["HTML", "CSS", "JS"],
-          desc: "Design dark mode, animations, responsive pour app web.",
+          title: "Site",
+          stack: ["HTML", "CSS", "tsx", "ts", "sql"],
+          desc: "Design dark mode, animations, api.",
           url: null
         },
         {
           id: 3,
-          title: "Panel Admin",
-          stack: ["HTML", "CSS", "JS", "NodeJS", "API"],
-          desc: "Dashboard + CRUD + rôles/permissions.",
+          title: "Aimlab",
+          stack: ["HTML", "CSS", "JS", "lua", "Sql"],
+          desc: "menu de choix d'entrainement + timer + Leaderboard.",
+          url: null
+        },
+          id: 4,
+          title: "Chat",
+          stack: ["HTML", "CSS", "JS", "lua"],
+          desc: " Interface Moderne (NUI)+ Notification.",
           url: null
         },
       ];
 
       const socials = {
-        github: "https://github.com/tonprofil", // ← Mets ton GitHub
-        email: "mailto:exemple@mail.com",       // ← Mets ton email
-        discord: null
+        github: "https://github.com/Lixzyy", // ← Mets ton GitHub
+        email: null,       // ← Mets ton email
+        discord: "lixzy_el"
       };
 
       // ---- Utils ----
@@ -303,12 +309,15 @@
       const COMMAND_LIST = Object.keys(COMMANDS).sort();
 
       // ---- Implémentations ----
-      function banner() {
-        const art = [
-          "  ___                 _ _           ",
-          " | _ ) __ _ _ _  _  _| (_)_ _  _ _  ",
-          " | _ \\/ _` | ' \\| || | | | ' \\| ' \\ ",
-          " |___/\\__,_|_||_|\\_,_|_|_|_||_|_||_|",
+    function bannner() {
+      const art = [
+        " _     _                  ",
+        "| |   (_)_  __ _____   _  ",
+        "| |   | \ \/ /|_  / | | | ",
+        "| |___| |>  <  / /| |_| | ",
+        "|_____|_/_/\_\/___|\__, | ",
+        "                    |___/ ",
+      
           `        Portfolio — ${USER}`,
         ];
         art.forEach(l => printLine(`<span class="tag">${escapeHtml(l)}</span>`));
@@ -337,7 +346,7 @@
 
       function skills() {
         printLine(`<span class="strong">Compétences</span>`);
-        printLine(`• Web : HTML, CSS, JavaScript`);
+        printLine(`• Web : HTML, CSS, JavaScript, tsx, ts, Sql`);
         printLine(`• Backend : Node.js/Express, SQL/MariaDB`);
         printLine(`• FiveM : Lua, optimisation, intégrations (DB, Webhooks)`);
         printLine(`• Outils : Git, UI/UX, performance`);
